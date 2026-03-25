@@ -1,29 +1,27 @@
-// CA_10: Props tipadas estrictamente
 import React from "react";
-import { Product } from "../interfaces";
+import { Destination } from "../interfaces";
 
-export interface ProductCardProps {
-  product: Product;
+export interface DestinationCardProps {
+  destination: Destination;
 }
 
-// CA_09: Renderiza nombre, precio, categoría e imagen
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<DestinationCardProps> = ({ destination }) => {
   return (
     <div className="product-card">
       <div className="product-image-wrapper">
-        <img src={product.imageUrl} alt={product.name} className="product-image" />
-        {!product.isActive && <span className="badge-inactive">Inactivo</span>}
+        <img src={destination.imageUrl} alt={destination.name} className="product-image" />
+        {!destination.isAvailable && <span className="badge-inactive">No disponible</span>}
       </div>
       <div className="product-info">
-        <span className="product-category">{product.category}</span>
-        <h3 className="product-name">{product.name}</h3>
-        <p className="product-brand">{product.brand}</p>
-        {product.description && (
-          <p className="product-description">{product.description}</p>
+        <span className="product-category">{destination.type}</span>
+        <h3 className="product-name">{destination.name}</h3>
+        <p className="product-brand">{destination.operator}</p>
+        {destination.description && (
+          <p className="product-description">{destination.description}</p>
         )}
         <div className="product-footer">
-          <span className="product-price">${product.price.toLocaleString("es-CO")}</span>
-          <span className="product-stock">{product.quantity} unidades</span>
+          <span className="product-price">${destination.pricePerPerson.toLocaleString("es-CO")} / persona</span>
+          <span className="product-stock">{destination.availableSpots} cupos</span>
         </div>
       </div>
     </div>

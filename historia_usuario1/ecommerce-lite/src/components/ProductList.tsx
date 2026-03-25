@@ -1,17 +1,16 @@
-// CA_08: Listado de productos usando .map()
 import React from "react";
-import { Product } from "../interfaces";
+import { Destination } from "../interfaces";
 import ProductCard from "./ProductCard";
 
-interface ProductListProps {
-  products: Product[];
+interface DestinationListProps {
+  destinations: Destination[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList: React.FC<DestinationListProps> = ({ destinations }) => {
   return (
     <section className="product-list">
-      {products.map((product) => (
-        <ProductCard key={product.sku} product={product} />
+      {destinations.map((destination) => (
+        <ProductCard key={destination.code} destination={destination} />
       ))}
     </section>
   );

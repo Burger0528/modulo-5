@@ -1,7 +1,6 @@
 import React from "react";
 import { User } from "../interfaces";
 
-// CA_10: Props tipadas estrictamente
 export interface UserCardProps {
   user: User;
 }
@@ -22,6 +21,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
         <p className="user-address">
           {user.address.city}, {user.address.country}
         </p>
+        {user.description && <p className="user-description">{user.description}</p>}
       </div>
     </div>
   );

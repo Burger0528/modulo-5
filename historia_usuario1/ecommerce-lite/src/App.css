@@ -6,12 +6,12 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #f4f6f9;
-  color: #1a1a2e;
+  background: #f0f4f8;
+  color: #0d2137;
 }
 
 .app-header {
-  background: #1a1a2e;
+  background: linear-gradient(135deg, #0d2137 0%, #1a4a6e 100%);
   color: white;
   padding: 20px 32px;
   display: flex;
@@ -136,9 +136,9 @@ body {
 }
 
 .product-price {
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #0d2137;
 }
 
 .product-stock {
@@ -167,7 +167,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #1a1a2e;
+  background: linear-gradient(135deg, #0d2137, #1a6e4a);
   color: white;
   display: flex;
   align-items: center;
@@ -202,8 +202,15 @@ body {
 }
 
 .role-admin { background: #ffecd2; color: #c75000; }
-.role-seller { background: #d4edda; color: #155724; }
+.role-agent { background: #d4edda; color: #155724; }
 .role-customer { background: #d1ecf1; color: #0c5460; }
+
+.user-description {
+  font-size: 0.72rem;
+  color: #888;
+  margin-top: 4px;
+  font-style: italic;
+}
 
 .user-status {
   font-size: 0.7rem;
