@@ -1,5 +1,5 @@
 import React from "react";
-import { products, users } from "./data/data";
+import { destinations, users } from "./data/data";
 import ProductList from "./components/ProductList";
 import UserCard from "./components/UserCard";
 import "./App.css";
@@ -8,20 +8,18 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Ecommerce Lite</h1>
-        <span className="header-subtitle">{products.length} productos disponibles</span>
+        <h1>Viajes Lite ✈️</h1>
+        <span className="header-subtitle">{destinations.length} destinos disponibles</span>
       </header>
 
       <main className="app-main">
-        // Sección principal de productos
         <section className="section">
-          <h2 className="section-title">Productos</h2>
-          <ProductList products={products} />
+          <h2 className="section-title">Destinos</h2>
+          <ProductList destinations={destinations} />
         </section>
 
-        // Sección de usuarios del sistema
         <section className="section">
-          <h2 className="section-title">Usuarios</h2>
+          <h2 className="section-title">Viajeros & Agentes</h2>
           <div className="user-list">
             {users.map((user) => (
               <UserCard key={user.id} user={user} />
