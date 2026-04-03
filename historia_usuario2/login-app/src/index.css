@@ -1,0 +1,204 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #e8f0fe 0%, #dde8ff 30%, #ece5ff 60%, #fce4ec 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Login ─────────────────────────────────────────────── */
+.apple-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.apple-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow:
+    0 20px 60px rgba(100, 120, 180, 0.18),
+    0 2px 8px rgba(100, 120, 180, 0.1);
+}
+
+.apple-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.apple-logo svg {
+  filter: drop-shadow(0 2px 8px rgba(0, 122, 255, 0.5));
+}
+
+.apple-card h1 {
+  color: #1d1d1f;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.apple-card .subtitle {
+  color: rgba(60, 60, 67, 0.5);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.apple-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.apple-input {
+  background: rgba(118, 118, 128, 0.08);
+  border: 1px solid rgba(60, 60, 67, 0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #1d1d1f;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.apple-input::placeholder {
+  color: rgba(60, 60, 67, 0.35);
+}
+
+.apple-input:focus {
+  border-color: #0a84ff;
+  background: rgba(10, 132, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.2);
+}
+
+.apple-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #0a84ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(10, 132, 255, 0.4);
+  margin-top: 8px;
+  letter-spacing: -0.2px;
+}
+
+.apple-btn:hover {
+  background: #2196f3;
+  box-shadow: 0 6px 24px rgba(10, 132, 255, 0.55);
+}
+
+.apple-btn:active {
+  transform: scale(0.98);
+  background: #0070e0;
+}
+
+.apple-message {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.apple-message.success {
+  background: rgba(48, 209, 88, 0.15);
+  border: 1px solid rgba(48, 209, 88, 0.3);
+  color: #30d158;
+}
+
+.apple-message.error {
+  background: rgba(255, 69, 58, 0.15);
+  border: 1px solid rgba(255, 69, 58, 0.3);
+  color: #ff453a;
+}
+
+/* ─── Home ───────────────────────────────────────────────── */
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 24px;
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow:
+    0 20px 60px rgba(100, 120, 180, 0.18),
+    0 2px 8px rgba(100, 120, 180, 0.1);
+  text-align: center;
+}
+
+.home-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+  color: #0a84ff;
+}
+
+.home-card h2 {
+  color: #1d1d1f;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+}
+
+.home-card p {
+  color: rgba(60, 60, 67, 0.5);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.home-badge {
+  display: inline-block;
+  background: rgba(48, 209, 88, 0.15);
+  border: 1px solid rgba(48, 209, 88, 0.3);
+  color: #30d158;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+}
