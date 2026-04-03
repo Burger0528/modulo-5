@@ -1,8 +1,11 @@
 export function Home() {
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Home</h2>
-      <p>Login exitoso</p>
+    <div className="home-page">
+      <div className="home-card">
+        <h2>Bienvenido</h2>
+        <p>Has iniciado sesión correctamente en tu cuenta.</p>
+        <span className="home-badge">Sesión activa</span>
+      </div>
     </div>
   );
 }
