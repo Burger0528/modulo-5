@@ -10,7 +10,6 @@ export interface CardProps {
   imageUrl?: string;
   // CA_12: footer opcional (pensado para Button)
   footer?: React.ReactNode;
-  // Contenido adicional libre
   children?: React.ReactNode;
   // Badge principal integrado (CA_13)
   badgeLabel: string;
@@ -36,7 +35,7 @@ const Card: React.FC<CardProps> = ({
       <div className="card-body">
         <div className="card-header">
           <h3 className="card-title">{title}</h3>
-          // CA_13: Badge siempre presente en el diseño
+          {/* CA_13: Badge siempre presente en el diseño */}
           <Badge label={badgeLabel} status={badgeStatus} />
         </div>
         {children && <div className="card-content">{children}</div>}
