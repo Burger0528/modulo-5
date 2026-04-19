@@ -34,6 +34,7 @@ export default async function DashboardPage() {
         </form>
       </header>
 
+      <p className="dashboard-section-label">Resumen</p>
       <section className="dashboard-grid">
         <Card title="Usuarios totales" value={totalUsers} accent="blue" description="Registrados en el sistema" />
         <Card title="Mi ID" value={user.id} accent="green" />
